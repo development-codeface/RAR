@@ -1,4 +1,4 @@
-package mobileapp.rar.com.rar;
+package mobileapp.rar.com.rarmobapp;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;

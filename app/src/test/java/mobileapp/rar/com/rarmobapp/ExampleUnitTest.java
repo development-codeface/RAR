@@ -1,4 +1,4 @@
-package mobileapp.rar.com.rar;
+package mobileapp.rar.com.rarmobapp;
 
 import org.junit.Test;
 
