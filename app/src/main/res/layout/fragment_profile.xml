@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_56"
+            android:elevation="@dimen/DP_8"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:background="@color/colorPrimary"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/back_btn"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/DP_16"
+                    android:layout_width="@dimen/DP_16"
+                    android:layout_height="@dimen/DP_16"
+                    app:srcCompat="@drawable/ic_icon_white"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/DP_44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/viewprofile"
+                    android:textSize="@dimen/SP_18"
+                    android:textColor="#ffffff"
+                    style="@style/Roboto.Medium"/>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+
+        <FrameLayout
+            android:id="@+id/maincontainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP_258"
+            android:background="@color/colorPrimary"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP_258"
+                android:background="@color/colorTransparent"
+                android:elevation="@dimen/DP_1">
+
+                <mobileapp.rar.com.rarmobapp.widget.CircleImageView
+                    android:id="@+id/imgView_left_icon"
+                    android:layout_width="@dimen/DP_90"
+                    android:layout_height="@dimen/DP_90"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/DP_44"
+                    app:srcCompat="@drawable/avatar" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/imgView_left_icon"
+                    android:layout_marginTop="@dimen/DP_16"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/profilename"
+                    android:textColor="@color/colorWhite"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_name"
+                    android:layout_marginTop="@dimen/DP_16"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/profileid"
+                    android:textColor="@color/colorWhite"
+                    />
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/DP_36"
+            >
+
+            <RelativeLayout
+                android:id="@+id/profile_emailSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_phoneTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_marginTop="@dimen/DP_16"
+                    android:text="@string/profileEmailTitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_phoneValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_phoneTitle"
+                    android:layout_marginTop="@dimen/DP_1"
+                    android:text="@string/profileEmailvalue"
+                    android:textColor="@color/colorBlack"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_PhoneSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_emailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:text="@string/profilePhonetitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_emailValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_emailTitle"
+                    android:layout_marginTop="@dimen/DP_1"
+                    android:text="@string/profilePhonevalue"
+                    android:textColor="@color/colorBlack"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_DOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_dobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:text="@string/profileDobtitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_dobValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_dobTitle"
+                    android:layout_marginTop="@dimen/DP_1"
+                    android:text="@string/profileDobvalue"
+                    android:textColor="@color/colorBlack"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profile_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_countryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:text="@string/profileCountrytitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_countryValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_countryTitle"
+                    android:layout_marginTop="@dimen/DP_1"
+                    android:text="@string/profileCountryvalue"
+                    android:textColor="@color/colorBlack"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/profile_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_genderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:text="@string/profileGendertitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_genderValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:layout_below="@+id/profile_genderTitle"
+                    android:layout_marginTop="@dimen/DP_1"
+                    android:text="@string/profileGendervalue"
+                    android:textColor="@color/colorBlack"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/profile_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/DP_16"
+                android:elevation="@dimen/DP_1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/profile_adderessTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Roboto.Medium"
+                    android:textSize="@dimen/SP_18"
+                    android:text="@string/profileAddresstitle"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

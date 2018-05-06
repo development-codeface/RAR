@@ -1,11 +1,108 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+    ext.versions = [
+            'compileSdk'        : 27,
+            'buildTools'        : '27.0.2',
+            'minSdk'            : 18,
+            'supportLibrary'    : '27.0.2',
+            'playServiceLib'    : '12.0.0',
+            'multidex'          : '1.0.2',
+            'gsonLib'           : '2.4',
+            'retrofitLib'       : '2.3.0',
+            'okhttpLib'         : '3.8.0',
+            'butterknife'       : '8.4.0',
+            'rxjava'            : '2.1.0',
+            'rxLifecycle'       : '1.0',
+            'constraintLayout'  : '1.0.2',
+            'glide'             : '4.5.0',
+            'tbruyelle'         : '0.9.4',
+            'espresso'          : '3.0.0',
+            'rxandroid'         : '2.0.1',
+    ]
+
+    ext.deps = [
+            'support'               : [
+                    'annotations'     : "com.android.support:support-annotations:${versions.supportLibrary}",
+                    'v4'              : "com.android.support:support-v4:${versions.supportLibrary}",
+                    'v7'              : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    'v13'             : "com.android.support:support-v13:${versions.supportLibrary}",
+                    'palette'         : "com.android.support:palette-v7:${versions.supportLibrary}",
+                    'design'          : "com.android.support:design:${versions.supportLibrary}",
+                    'recyclerView'    : "com.android.support:recyclerview-v7:${versions.supportLibrary}",
+                    'cardView'        : "com.android.support:cardview-v7:${versions.supportLibrary}",
+                    'supportExif'     : "com.android.support:exifinterface:${versions.supportLibrary}",
+                    'vectorDrawable'  : "com.android.support:support-vector-drawable:${versions.supportLibrary}",
+                    'multidex'        : "com.android.support:multidex:${versions.multidex}",
+                    'constraintLayout': "com.android.support.constraint:constraint-layout:${versions.constraintLayout}",
+            ],
+            'firebase'              : [
+                    'analytics': "com.google.firebase:firebase-database:${versions.playServiceLib}",
+                    'core'     : "com.google.firebase:firebase-core:${versions.playServiceLib}",
+                    'crash'    : "com.google.firebase:firebase-crash:${versions.playServiceLib}",
+                    'messaging': "com.google.firebase:firebase-messaging:${versions.playServiceLib}",
+                    'config'   : "com.google.firebase:firebase-config:${versions.playServiceLib}",
+                    'invite'   : "com.google.firebase:firebase-invites:${versions.playServiceLib}",
+                    'indexing' : "com.google.firebase:firebase-appindexing:${versions.playServiceLib}",
+            ],
+
+            'butterKnife'           : [
+                    'compile'            : "com.jakewharton:butterknife:${versions.butterknife}",
+                    'annotationProcessor': "com.jakewharton:butterknife-compiler:${versions.butterknife}",
+            ],
+            'okhttp'                : [
+                    'runtime'       : "com.squareup.okhttp3:okhttp:${versions.okhttpLib}",
+                    // both (http ok and interceptor) has to be of same version
+                    'logIntercepter': "com.squareup.okhttp3:logging-interceptor:${versions.okhttpLib}",
+                    'urlconnection' : "com.squareup.okhttp3:okhttp-urlconnection:${versions.okhttpLib}",
+            ],
+            'retrofit'              : [
+                    'runtime'      : "com.squareup.retrofit2:retrofit:${versions.retrofitLib}",
+                    'gsonConverter': "com.squareup.retrofit2:converter-gson:${versions.retrofitLib}",
+                    'adapter'      : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitLib}",
+            ],
+            'rx'                    : [
+                    'android'           : "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}",
+                    'java'              : "io.reactivex.rxjava2:rxjava:${versions.rxjava}",
+
+                    //Lifecycle
+                    'lifecycleJava'     : "com.trello:rxlifecycle:${versions.rxLifecycle}",
+                    'lifecycleComponent': "com.trello:rxlifecycle-components:${versions.rxLifecycle}",
+                    //'lifecycle'         : "com.trello.rxlifecycle2:rxlifecycle-android-lifecycle-kotlin:2.2.0",
+
+                    // Runtime permission helper library based on RxPermission
+                    'tbruyelle'         : "com.tbruyelle.rxpermissions:rxpermissions:${versions.tbruyelle}@aar",
+            ],
+            'glide'                 : [
+                    'runtime' : "com.github.bumptech.glide:glide:${versions.glide}",
+                    'compiler': "com.github.bumptech.glide:compiler:${versions.glide}",
+            ],
+            'junit'                 : "junit:junit:4.12",
+            'espresso'              : [
+                    'idlingResource': "com.android.support.test.espresso:espresso-idling-resource:${versions.espresso}",
+                    'core'          : "com.android.support.test.espresso:espresso-core:${versions.espresso}",
+                    'web'           : "com.android.support.test.espresso:espresso-web:${versions.espresso}",
+                    'contrib'       : "com.android.support.test.espresso:espresso-contrib:${versions.espresso}",
+                    'intents'       : "com.android.support.test.espresso:espresso-intents:${versions.espresso}",
+            ],
+    ]
     repositories {
+        google()
         jcenter()
+        // used for some
+        maven { url "https://jitpack.io" }
+        // required for auto parcel library
+        maven { url "https://clojars.org/repo/" }
+        // required for fabric library
+        maven { url "https://maven.fabric.io/public" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.1'
+
+        classpath 'io.fabric.tools:gradle:1.25.1' // Fabric dependency
+        classpath "com.google.gms:google-services:3.2.0"// Fire base plugin
+        classpath "com.stanfy.spoon:spoon-gradle-plugin:1.2.2"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,7 +111,15 @@ buildscript {
 
 allprojects {
     repositories {
+        google()
         jcenter()
+        maven { url "https://jitpack.io" }
+        // required for auto parcel library
+        // maven { url "https://clojars.org/repo/" }
+
+        //maven { url "https://maven.fabric.io/public" }
+        // required for crashlytics (also called Fabric)
+        maven { url "https://maven.google.com" }
     }
 }
 

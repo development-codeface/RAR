@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:text="Title"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/dropdown_header"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:clickable="true">
+
+        <Button
+            android:id="@+id/btn_dropdown"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text="fe"
+            android:textAllCaps="false"
+            android:textColor="@color/colorMineShaft"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/edit_txt_dropdown_no_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/btn_dropdown"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorMineShaft" />
+
+    </RelativeLayout>
+</LinearLayout>

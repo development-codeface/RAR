@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RAR.iml" filepath="$PROJECT_DIR$/RAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RARmobApp.iml" filepath="$PROJECT_DIR$/RARmobApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">RARMobApp</string>
+    <string name="logout">Log out</string>
+    <string name="myprofile_title">My Profile</string>
+    <string name="contact_modelator_title">Contact Moderator</string>
+    <string name="join_live_title">Join Live Class</string>
+    <string name="notification_title">Notification</string>
+    <string name="profilename">Lars-Erik Olsson (Leo)</string>
+    <string name="profileid">RAR Id: 02</string>
+    <string name="viewprofile">View Profile</string>
+    <string name="profilePhonetitle">Phone Number</string>
+    <string name="profilePhonevalue">+06 9806 9013</string>
+    <string name="profileDobtitle">Date Of Birth</string>
+    <string name="profileDobvalue">05-05-1986</string>
+    <string name="profileEmailTitle">Email</string>
+    <string name="profileEmailvalue">leo@gmail.com</string>
+    <string name="profileCountrytitle">Country</string>
+    <string name="profileCountryvalue">Sweden</string>
+    <string name="profileGendertitle">Gender</string>
+    <string name="profileGendervalue">Male</string>
+    <string name="profileAddresstitle">Address</string>
 </resources>

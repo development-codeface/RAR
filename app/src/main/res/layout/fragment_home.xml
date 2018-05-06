@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/DP_10"
+        android:layout_marginBottom="@dimen/DP_10"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row1"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/DP_200"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintLeft_toLeftOf="@+id/imgLogo"
+        app:layout_constraintRight_toRightOf="@+id/imgLogo"
+
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:id="@+id/profileMenu"
+            android:layout_height="@dimen/DP_258"
+            android:layout_weight = ".5"
+            >
+            <mobileapp.rar.com.rarmobapp.widget.CircleImageView
+                android:id="@+id/profileMenuIcon"
+                android:layout_width="@dimen/DP_90"
+                android:layout_height="@dimen/DP_90"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/DP_44"
+                app:srcCompat="@drawable/profile_icon"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/profileMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Roboto.Medium"
+                android:textSize="@dimen/SP_18"
+                android:layout_below="@+id/imgView_left_icon"
+                android:layout_marginTop="@dimen/DP_16"
+                android:layout_centerHorizontal="true"
+                android:text="@string/myprofile_title"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/profileMenuIcon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/DP_258"
+            android:layout_weight = ".5"
+            >
+
+            <mobileapp.rar.com.rarmobapp.widget.CircleImageView
+                    android:id="@+id/modulatorIcon"
+                    android:layout_width="@dimen/DP_90"
+                    android:layout_height="@dimen/DP_90"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/DP_44"
+                    app:srcCompat="@drawable/moderator_icon"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/modulatorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Roboto.Medium"
+                android:textSize="@dimen/SP_18"
+                android:layout_below="@+id/imgView_left_icon"
+                android:layout_marginTop="@dimen/DP_16"
+                android:layout_centerHorizontal="true"
+                android:text="@string/contact_modelator_title"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/modulatorIcon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row2"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/DP_200"
+        app:layout_constraintTop_toBottomOf="@+id/row1"
+        app:layout_constraintLeft_toLeftOf="@+id/row1"
+        app:layout_constraintRight_toRightOf="@+id/row1"
+
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:id="@+id/liveEventMenu"
+            android:layout_height="@dimen/DP_258"
+            android:layout_weight = ".5"
+            >
+            <mobileapp.rar.com.rarmobapp.widget.CircleImageView
+                android:id="@+id/liveEventMenuIcon"
+                android:layout_width="@dimen/DP_90"
+                android:layout_height="@dimen/DP_90"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/DP_44"
+                app:srcCompat="@drawable/livestream_online"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/liveEventMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Roboto.Medium"
+                android:textSize="@dimen/SP_18"
+                android:layout_below="@+id/imgView_left_icon"
+                android:layout_marginTop="@dimen/DP_16"
+                android:layout_centerHorizontal="true"
+                android:text="@string/join_live_title"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/liveEventMenuIcon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/DP_258"
+            android:layout_weight = ".5"
+            >
+            <mobileapp.rar.com.rarmobapp.widget.CircleImageView
+                    android:id="@+id/notificationMenuIcon"
+                    android:layout_width="@dimen/DP_90"
+                    android:layout_height="@dimen/DP_90"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/DP_44"
+                    app:srcCompat="@drawable/notification_icon"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/notificationMenuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Roboto.Medium"
+                android:textSize="@dimen/SP_18"
+                android:layout_below="@+id/imgView_left_icon"
+                android:layout_marginTop="@dimen/DP_16"
+                android:layout_centerHorizontal="true"
+                android:text="@string/notification_title"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/notificationMenuIcon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    
+    
+</android.support.constraint.ConstraintLayout>

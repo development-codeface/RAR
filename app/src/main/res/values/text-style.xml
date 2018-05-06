@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Roboto.Regular" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="Roboto.Bold" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Roboto.Medium" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Roboto.Light" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+</resources>
